@@ -1,0 +1,19 @@
+<form class="formGroup" (ngSubmit)="addQuotation()">
+  <label for="quotation">Citação</label>
+  <input id="quotation" name="quotation" type="text" [(ngModel)]="quotation">
+  <label for="author">Autor</label>
+  <input id="author" name="author" type="text" [(ngModel)]="author">
+  <button type="submit">Adicionar</button>
+</form>
+
+<div class="container" *ngFor="let quote of listQuotation">
+  <div class="cardQuote cardModel1">
+    <div class="content">
+      <img src="https://img.icons8.com/office/40/000000/quote-left.png"/>
+      <p class="text">{{quote.quotation}}</p>
+    </div>
+    <div class="details">
+      <p>{{quote.author}}</p>
+    </div>
+  </div>
+</div>

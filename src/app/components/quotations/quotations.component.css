@@ -1,0 +1,42 @@
+.borderHelp {
+  border: 1px solid red;
+}
+
+.container {
+  min-width: 90%;
+  margin: 0 auto;
+}
+
+.cardQuote {
+  /* background: #fffad1; */
+
+  width: 60%;
+  margin: 2em auto;
+  padding: 2em;
+  border-radius: 25px;
+
+  box-shadow: 2px 2px 7px 2px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 2px 2px 7px 2px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 2px 2px 7px 2px rgba(0, 0, 0, 0.25);
+}
+
+.cardQuote .content {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 1em;
+}
+
+.cardQuote .details {
+  margin-left: 2em;
+}
+
+.cardModel1 {
+  background-color: #444;
+  color: gainsboro;
+}
+
+.cardModel2 {
+  background-color: rgb(138, 223, 145);
+  color: rgb(68, 68, 68);
+}

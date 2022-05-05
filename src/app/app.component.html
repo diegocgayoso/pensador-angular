@@ -57,22 +57,9 @@
 
   <!-- Resources -->
   <h2>Pensador</h2>
-  <form class="formGroup" (ngSubmit)="addQuotation()">
-    <label for="quotation">Citação</label>
-    <input id="quotation" name="quotation" type="text" [(ngModel)]="quotation">
-    <label for="author">Autor</label>
-    <input id="author" name="author" type="text" [(ngModel)]="author">
-    <button type="submit">Adicionar</button>
-  </form>
+  <app-add-quotation></app-add-quotation>
 
-  <table>
-    <th>
-      <tr>
-        <td>Citação</td>
-        <td>Autor</td>
-      </tr>
-    </th>
-  </table>
+  <app-quotations></app-quotations>
 
 
 
