@@ -3,7 +3,7 @@
 }
 
 .container {
-  min-width: 90%;
+  min-width: 720px;
   margin: 0 auto;
 }
 
@@ -27,8 +27,18 @@
   margin-bottom: 1em;
 }
 
+.cardQuote .content p {
+  font-size: 1.4em;
+  font-weight: 800;
+}
+
 .cardQuote .details {
   margin-left: 2em;
+}
+
+.cardQuote .details p {
+  font-weight: 300;
+  color: #b3b3b3;
 }
 
 .cardModel1 {

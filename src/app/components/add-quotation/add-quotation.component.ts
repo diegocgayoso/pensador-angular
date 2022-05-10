@@ -1,35 +1,33 @@
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-add-quotation',
   templateUrl: './add-quotation.component.html',
-  styleUrls: ['./add-quotation.component.css']
+  styleUrls: ['./add-quotation.component.css'],
 })
 export class AddQuotationComponent implements OnInit {
-
+  @Output() submitQuote = new EventEmitter();
   listQuotation: any = [];
 
   quotation: string = '';
   author: string = '';
 
-  constructor() { }
+  constructor() {}
 
-  addQuotation(){
+  addQuotation() {
     const dataQuotation = {
       quotation: this.quotation,
-      author: this.author,
-      data: new Date()
-    }
-    this.listQuotation.push(dataQuotation)
+      author: this.author
+    };
+    this.submitQuote.emit(dataQuotation);
+    this.listQuotation.push(dataQuotation);
     console.table(this.listQuotation);
     this.clearInputs();
   }
-  clearInputs(){
+  clearInputs() {
     this.quotation = '';
     this.author = '';
   }
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

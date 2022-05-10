@@ -8,4 +8,10 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'pensador';
 
+  dataQuotations: any = [];
+
+  add(evento: any) {
+    this.dataQuotations.push(evento)
+    console.log(evento)
+  }
 }

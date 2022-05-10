@@ -57,25 +57,7 @@
 
   <!-- Resources -->
   <h2>Pensador</h2>
-  <app-add-quotation></app-add-quotation>
-
-  <app-quotations></app-quotations>
-
-
-
-
-
-
-
-
-
+  <app-add-quotation (submitQuote)="add($event)"></app-add-quotation>
+  <app-quotations [listQuotations]="dataQuotations"></app-quotations>
 </div>
-
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
