@@ -37,16 +37,24 @@
 }
 
 .cardQuote .details p {
-  font-weight: 300;
-  color: #b3b3b3;
+  font-weight: 500;
+  /* color: #b3b3b3; */
 }
 
-.cardModel1 {
-  background-color: #444;
+.class1 {
+  background-color: rgb(163, 71, 71);
   color: gainsboro;
+  font-family: 'Inconsolata', monospace;
 }
 
-.cardModel2 {
+.class2 {
+  background-color: rgb(190, 157, 79);
+  color: rgb(68, 68, 68);
+  font-family: 'Oleo Script Swash Cap', cursive;
+}
+
+.class3 {
   background-color: rgb(138, 223, 145);
   color: rgb(68, 68, 68);
+  font-family: 'Macondo', cursive;
 }

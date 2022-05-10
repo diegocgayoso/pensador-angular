@@ -7,17 +7,20 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class AddQuotationComponent implements OnInit {
   @Output() submitQuote = new EventEmitter();
+
   listQuotation: any = [];
 
   quotation: string = '';
   author: string = '';
+  modelCard: string = '';
 
   constructor() {}
 
   addQuotation() {
     const dataQuotation = {
       quotation: this.quotation,
-      author: this.author
+      author: this.author,
+      modelCard: this.modelCard
     };
     this.submitQuote.emit(dataQuotation);
     this.listQuotation.push(dataQuotation);
