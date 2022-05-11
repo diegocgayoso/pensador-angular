@@ -1,4 +1,4 @@
-import { QuotationsService } from './../../serivce/quotations.service';
+import { QuotationsService } from './../../service/quotations.service';
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({

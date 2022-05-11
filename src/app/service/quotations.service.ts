@@ -6,6 +6,7 @@ import { Injectable } from '@angular/core';
 export class QuotationsService {
   private listQuotations: any[];
 
+
   constructor() {
     this.listQuotations = [
       {
