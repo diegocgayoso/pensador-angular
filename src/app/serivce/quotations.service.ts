@@ -11,12 +11,17 @@ export class QuotationsService {
       {
         quotation: 'Tudo passa',
         author: 'Kayuá',
-        modelCard: '',
+        modelCard: 'class1',
       },
       {
         quotation: 'Tudo passa',
         author: 'Kayuá',
-        modelCard: '',
+        modelCard: 'class2',
+      },
+      {
+        quotation: 'Tudo passa',
+        author: 'Kayuá',
+        modelCard: 'class3',
       },
     ];
   }
@@ -26,7 +31,12 @@ export class QuotationsService {
   }
 
   add(quotation: any) {
+    this.datar(quotation)
     this.listQuotations.push(quotation);
     console.table(this.listQuotations);
+  }
+
+  private datar(quotation: any){
+    quotation.data = new Date();
   }
 }

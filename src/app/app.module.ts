@@ -15,7 +15,8 @@ import { QuotationsComponent } from './components/quotations/quotations.componen
   ],
   imports: [
     BrowserModule,
-    FormsModule, AppRoutingModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

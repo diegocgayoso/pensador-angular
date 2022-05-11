@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { QuotationsService } from 'src/app/serivce/quotations.service';
 
 @Component({
@@ -14,7 +15,7 @@ export class AddQuotationComponent implements OnInit {
   author: string = '';
   modelCard: string = '';
 
-  constructor(private service: QuotationsService) {}
+  constructor(private service: QuotationsService, private router: Router) {}
 
   addQuotation() {
     const dataQuotation = {
@@ -23,6 +24,7 @@ export class AddQuotationComponent implements OnInit {
       modelCard: this.modelCard
     };
     this.service.add(dataQuotation);
+    this.router.navigateByUrl('quotations');
     this.clearInputs();
   }
   clearInputs() {
