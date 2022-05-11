@@ -1,4 +1,5 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { QuotationsService } from 'src/app/serivce/quotations.service';
 
 @Component({
   selector: 'app-add-quotation',
@@ -6,7 +7,6 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./add-quotation.component.css'],
 })
 export class AddQuotationComponent implements OnInit {
-  @Output() submitQuote = new EventEmitter();
 
   listQuotation: any = [];
 
@@ -14,7 +14,7 @@ export class AddQuotationComponent implements OnInit {
   author: string = '';
   modelCard: string = '';
 
-  constructor() {}
+  constructor(private service: QuotationsService) {}
 
   addQuotation() {
     const dataQuotation = {
@@ -22,9 +22,7 @@ export class AddQuotationComponent implements OnInit {
       author: this.author,
       modelCard: this.modelCard
     };
-    this.submitQuote.emit(dataQuotation);
-    this.listQuotation.push(dataQuotation);
-    console.table(this.listQuotation);
+    this.service.add(dataQuotation);
     this.clearInputs();
   }
   clearInputs() {
