@@ -1,13 +1,13 @@
 
 <div class="toolbar" role="banner">
-  <h2>Pensador</h2>
+  <a routerLink="quotations">
+
+    <h2>Pensador</h2>
+  </a>
+  <a routerLink="form">Adicionar Citação</a>
 </div>
 
 <div class="content" role="main">
-
-  <app-add-quotation></app-add-quotation>
-  <app-quotations></app-quotations>
-
-
+  <router-outlet></router-outlet>
 </div>
 

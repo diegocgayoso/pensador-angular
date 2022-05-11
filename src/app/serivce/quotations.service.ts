@@ -1,14 +1,24 @@
 import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class QuotationsService {
-
   private listQuotations: any[];
 
   constructor() {
-    this.listQuotations = [];
+    this.listQuotations = [
+      {
+        quotation: 'Tudo passa',
+        author: 'Kayuá',
+        modelCard: '',
+      },
+      {
+        quotation: 'Tudo passa',
+        author: 'Kayuá',
+        modelCard: '',
+      },
+    ];
   }
 
   get quotations() {
@@ -17,6 +27,6 @@ export class QuotationsService {
 
   add(quotation: any) {
     this.listQuotations.push(quotation);
-    console.table(this.listQuotations)
+    console.table(this.listQuotations);
   }
 }

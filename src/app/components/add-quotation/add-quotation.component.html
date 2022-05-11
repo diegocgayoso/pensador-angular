@@ -1,20 +1,30 @@
-<form class="formGroup" (ngSubmit)="addQuotation()">
-  <label for="quotation">Citação</label>
-  <input id="quotation" name="quotation" type="text" [(ngModel)]="quotation">
-  <label for="author">Autor</label>
-  <input id="author" name="author" type="text" [(ngModel)]="author">
+<div class="container">
 
-  <div #model (change)="0">
-    <label for="styleClass1">Modelo 1</label>
-    <input type="radio" id="styleClass1" name="models" value="class1" [(ngModel)]="modelCard">
+  <form class="formGroup" (ngSubmit)="addQuotation()">
+    <label for="quotation">Citação</label>
+    <input id="quotation" name="quotation" type="text" [(ngModel)]="quotation">
+    <label for="author">Autor</label>
+    <input id="author" name="author" type="text" [(ngModel)]="author">
 
-    <label for="styleClass2">Modelo 2</label>
-    <input type="radio" id="styleClass2" name="models" value="class2" [(ngModel)]="modelCard">
+    <div #model (change)="0" class="models">
+      <div class="model">
+        <label for="styleClass1">Modelo 1</label>
+        <input type="radio" id="styleClass1" name="models" value="class1" [(ngModel)]="modelCard">
+      </div>
 
-    <label for="styleClass3">Modelo 3</label>
-    <input type="radio" id="styleClass3" name="models" value="class3" [(ngModel)]="modelCard">
-  </div>
+      <div class="model">
+        <label for="styleClass2">Modelo 2</label>
+        <input type="radio" id="styleClass2" name="models" value="class2" [(ngModel)]="modelCard">
+      </div>
 
-  <button type="submit">Adicionar</button>
+      <div class="model">
+        <label for="styleClass3">Modelo 3</label>
+        <input type="radio" id="styleClass3" name="models" value="class3" [(ngModel)]="modelCard">
+      </div>
 
-</form>
+    </div>
+
+    <button type="submit">Adicionar</button>
+
+  </form>
+</div>
