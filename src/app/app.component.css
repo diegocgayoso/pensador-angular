@@ -31,10 +31,12 @@ p {
   right: 0;
   height: 60px;
   display: flex;
+  justify-content: space-around;
   align-items: center;
   background-color: #1976d2;
   color: white;
   font-weight: 600;
+  padding: 0 2em;
 }
 
 .content {
@@ -49,10 +51,12 @@ p {
 a,
 a:visited,
 a:hover {
-  color: #1976d2;
+  color: #ffffff;
   text-decoration: none;
 }
 
 a:hover {
   color: #125699;
 }
+
+

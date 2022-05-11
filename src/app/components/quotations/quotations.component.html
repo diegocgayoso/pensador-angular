@@ -1,4 +1,4 @@
-<section class="container" *ngIf="listQuotations.length > 0; else noQuotes;">
+<section class="container flexWrapGapCenter" *ngIf="listQuotations.length > 0; else noQuotes;">
   <div *ngFor="let quote of listQuotations">
     <div class="cardQuote {{quote.modelCard}}">
       <div class="content">
@@ -7,6 +7,7 @@
       </div>
       <div class="details">
         <p>{{quote.author}}</p>
+        <p>{{quote.data | date: "short"}}</p>
       </div>
     </div>
   </div>

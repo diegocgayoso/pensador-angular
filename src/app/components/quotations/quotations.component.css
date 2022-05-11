@@ -2,12 +2,14 @@
   border: 1px solid red;
 }
 
-.container {
+.flexWrapGapCenter {
   display: flex;
+  gap: 3em;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .cardQuote {
-  width: 60%;
   margin: 2em auto;
   padding: 2em;
   border-radius: 25px;
@@ -31,27 +33,29 @@
 
 .cardQuote .details {
   margin-left: 2em;
+  display: flex;
+  justify-content: space-between;
+  gap: 1em
 }
 
 .cardQuote .details p {
   font-weight: 500;
-  /* color: #b3b3b3; */
 }
 
 .class1 {
-  background-color: rgb(163, 71, 71);
+  background: linear-gradient(38deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
   color: gainsboro;
   font-family: 'Inconsolata', monospace;
 }
 
 .class2 {
-  background-color: rgb(190, 157, 79);
+  background: linear-gradient(38deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
   color: rgb(68, 68, 68);
   font-family: 'Oleo Script Swash Cap', cursive;
 }
 
 .class3 {
-  background-color: rgb(138, 223, 145);
-  color: rgb(68, 68, 68);
+  background: linear-gradient(38deg, rgba(10, 2, 158, 1) 0%, rgba(39, 147, 137, 0.8491879350348028) 62%, rgba(42, 173, 131, 1) 100%);
+  color: gainsboro;
   font-family: 'Macondo', cursive;
 }
