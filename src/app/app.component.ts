@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { QuotationsService } from './serivce/quotations.service';
 
 @Component({
   selector: 'app-root',
@@ -10,8 +11,9 @@ export class AppComponent {
 
   dataQuotations: any = [];
 
-  add(evento: any) {
-    this.dataQuotations.push(evento)
-    console.log(evento)
+  constructor(private service: QuotationsService){}
+
+  add($event: any) {
+    this.service.add($event)
   }
 }

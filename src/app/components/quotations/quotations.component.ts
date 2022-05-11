@@ -1,3 +1,4 @@
+import { QuotationsService } from './../../serivce/quotations.service';
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
@@ -6,8 +7,11 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./quotations.component.css'],
 })
 export class QuotationsComponent implements OnInit {
-  @Input() listQuotations: any = [];
-  constructor() {}
+  listQuotations: any = [];
 
-  ngOnInit(): void {}
+  constructor(private service: QuotationsService) {}
+
+  ngOnInit(): void {
+    this.listQuotations = this.service.quotations
+  }
 }
