@@ -7,20 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'pensador';
-  listQuotation: any = [];
 
-  quotation: string = '';
-  author: string = '';
+  constructor(){}
 
-
-  addQuotation(){
-    const dataQuotation = {
-      quotation: this.quotation,
-      author: this.author,
-      data: new Date()
-    }
-    this.listQuotation.push(dataQuotation)
-    console.table(this.listQuotation);
-
-  }
 }
