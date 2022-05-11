@@ -4,7 +4,8 @@
 
     <h2>Pensador</h2>
   </a>
-  <a routerLink="form">Adicionar Citação</a>
+  <a routerLink="form" *ngIf="showButton">Adicionar Citação</a>
+  <a routerLink="login" *ngIf="!showButton">Login</a>
 </div>
 
 <div class="content" role="main">

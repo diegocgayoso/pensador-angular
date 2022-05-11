@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { QuotationsService } from 'src/app/serivce/quotations.service';
+import { QuotationsService } from 'src/app/service/quotations.service';
 
 @Component({
   selector: 'app-add-quotation',
@@ -8,7 +8,6 @@ import { QuotationsService } from 'src/app/serivce/quotations.service';
   styleUrls: ['./add-quotation.component.css'],
 })
 export class AddQuotationComponent implements OnInit {
-
   listQuotation: any = [];
 
   quotation: string = '';
@@ -21,7 +20,7 @@ export class AddQuotationComponent implements OnInit {
     const dataQuotation = {
       quotation: this.quotation,
       author: this.author,
-      modelCard: this.modelCard
+      modelCard: this.modelCard,
     };
     this.service.add(dataQuotation);
     this.router.navigateByUrl('quotations');

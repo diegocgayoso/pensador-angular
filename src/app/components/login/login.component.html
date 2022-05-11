@@ -1,0 +1,16 @@
+<div class="container">
+  <h4>Login</h4>
+  <form>
+    <div class="row">
+      <label for="user">Usuário:</label>
+      <input [(ngModel)]="username" id="user" name="user" type="text">
+    </div>
+    <div class="row">
+      <label for="password">Senha:</label>
+      <input [(ngModel)]="password" id="password" name="password" type="password">
+    </div>
+    <div class="row">
+      <button (click)="login()">Entrar</button>
+    </div>
+  </form>
+</div>
