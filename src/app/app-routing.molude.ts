@@ -1,14 +1,15 @@
 import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { RouterModule, CanActivate } from '@angular/router';
 import { Routes } from '@angular/router';
 import { AddQuotationComponent } from './components/add-quotation/add-quotation.component';
 import { LoginComponent } from './components/login/login.component';
 import { QuotationsComponent } from './components/quotations/quotations.component';
+import { AuthGuards } from './guards/auth.guards';
 
 export const routes: Routes = [
   {path: '', redirectTo:'quotations', pathMatch:'full'},
-  {path: 'quotations', component: QuotationsComponent},
-  {path: 'form', component: AddQuotationComponent},
+  {path: 'quotations', component: QuotationsComponent, canActivate: [AuthGuards]},
+  {path: 'form', component: AddQuotationComponent, canActivate: [AuthGuards]},
   {path: 'login', component: LoginComponent},
 ]
 

@@ -37,4 +37,8 @@ export class LoginService {
     }
   }
 
+  userIsLogged(){
+    return this.userAutenticado
+  }
+
 }
